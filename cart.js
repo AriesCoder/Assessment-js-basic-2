@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, food) => acc + food.price, 0)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +55,10 @@ const cart = [
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, counponValue, tax) =>{
+    finalPrice = cartTotal * (1 + tax) - counponValue
+    return finalPrice
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +82,14 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    A customer object will have 4 properties:
+    - name: string
+    - phone number: string
+    - email: string
+    - address: string
+
+    name, email, address, phone number properties should be a string because that string contains any characters which is best discribe for these informations. Phone number also should be a string because sometime a phone number have to include a plus sign (+) or number 0 in the beginning
+
 
 */
 
@@ -86,5 +97,11 @@ const cart = [
     Now, create a customer object following your own
     guidelines.
 */
+const customer = {
+    name: 'Mary',
+    phoneNum: '6628766234',
+    email: 'cust@domain.com',
+    address: '233 ABC ave, SF, CA92356'
+}
 
 //CODE HERE
